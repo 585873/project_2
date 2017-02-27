@@ -16,9 +16,17 @@ ActiveRecord::Schema.define(version: 20170227154205) do
   enable_extension "plpgsql"
 
   create_table "instructors", force: :cascade do |t|
+    t.string "name"
+    t.string "email_id"
+    t.string "subject"
   end
 
   create_table "students", force: :cascade do |t|
+    t.string  "name"
+    t.string  "email_id"
+    t.integer "instructor_id"
+    t.index ["instructor_id"], name: "index_students_on_instructor_id", using: :btree
   end
 
+  add_foreign_key "students", "instructors"
 end

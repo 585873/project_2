@@ -1,0 +1,7 @@
+<h1> Instructor list </h1>
+
+<% @instructors.each do |instructor| %>
+  <div class="instructor">
+    <h2><a href="<%= instructor_path(instructor) %>"><%= instructor.name %></a></h2>
+  </div>
+<% end %>

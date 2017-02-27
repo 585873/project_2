@@ -9,6 +9,10 @@
   </head>
 
   <body>
+    <nav>
+      <h1>Welcome to Tutor app!</h1>
+      <h2><%= link_to "View instructors", instructors_path %> | <%= link_to "View Students", students_path %> | <%= link_to "New Students", new_instructor_path %></h2>
+    </nav>
     <%= yield %>
   </body>
 </html>
