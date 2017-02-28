@@ -1,0 +1,15 @@
+<h2>Edit Student File</h2>
+
+<%= form_for @student do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :email_id %>
+  <%= f.text_field :email_id %>
+
+  <%= f.submit %>
+<% end %>
+
+<%= form_for @student, method: :delete do |f| %>
+ <%= f.submit "Delete", class: "delete" %>
+<% end %>

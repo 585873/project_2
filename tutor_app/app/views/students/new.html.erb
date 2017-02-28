@@ -1,0 +1,10 @@
+<h1>Add new students here!</h1>
+<%= form_for @student do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :email_id %>
+  <%= f.text_field :email_id %>
+  <%= f.select(:instructor, options_for_select(@instructor_instructor))%>
+
+  <%= f.submit %>
+<% end %>
