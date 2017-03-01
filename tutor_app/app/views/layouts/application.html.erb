@@ -9,11 +9,22 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class = "signIn">
+    <% if !current_user %>
+      <%= link_to "Sign Up", new_user_registration_path %>
+      <%= link_to "Sign In", new_user_session_path %>
+    <% else %>
+      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+      <%= current_user.email %>
+   <% end %>
+ </div>
+      <h1 class='logo'><%= link_to "Tutor App", root_path %></h1>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
     <nav>
-      <h1>Welcome to Tutor app!</h1>
-      <h2><%= link_to "All instructors", instructors_path %> | <%= link_to "View Students", students_path %> | <%= link_to "New Students", new_student_path %></h2>
+      <h1>A Tutor The People Service!</h1>
+      <h2><%= link_to "All instructors", instructors_path %> | <%= link_to "View All Students", students_path %> | <%= link_to "Create New Students", new_student_path %></h2>
     </nav>
     <%= yield %>
   </body>

@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+ /*body{
+   background-image: url("https://udemy-images.udemy.com/course/750x422/298212_5847_3.jpg");
+   background-size: cover;
+ }*/
+.logo{
+  font-style: normal;
+  text-align: center;
+  color: white;
+}
+.signIn{
+  float: right;
+}
+.signIn:hover{
+  background-color: grey;
+}
+nav {
+  text-align: center;
+}
