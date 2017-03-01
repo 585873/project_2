@@ -17,17 +17,29 @@
    background-image: url("https://udemy-images.udemy.com/course/750x422/298212_5847_3.jpg");
    background-size: cover;
  }*/
+ body{
+   background-image: url("http://s3images.coroflot.com/user_files/individual_files/original_253703_vJ1eGnH9Cx7uTuLEbI3kQ1d2h.png");
+   /*background-size: cover;*/
+   background-position: center;
+   background-repeat: no-repeat;
+   height: 100vh;
+ }
 .logo{
-  font-style: normal;
-  text-align: center;
+  font-style: italic;
+  font-size: 40px;
+  /*text-align: center;*/
   color: white;
 }
 .signIn{
   float: right;
 }
 .signIn:hover{
-  background-color: grey;
+  background-color: yellow;
 }
-nav {
+nav{
   text-align: center;
+}
+nav h1 {
+  display: flex;
+  justify-content: space-around;
 }

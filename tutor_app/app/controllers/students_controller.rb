@@ -15,17 +15,17 @@ class StudentsController < ApplicationController
  #edit
   def edit
     @student = Student.find(params[:id])
-    if @student.instructor == current_user
-      @student.destroy
-    else
-      flash[:alert] = "Only the original author can delete"
-    end
-    redirect_to students_path
+    # if @student.instructor == current_user
+    #   @student.destroy
+    # else
+    #   flash[:alert] = "Only the original author can delete"
+    # end
+    # redirect_to students_path
   end
  #create
   def create
     @student = Student.new(student_params)
-    @student= current_user.students.create!(student_params)
+    # @student= current_user.students.create!(student_params)
     @student.instructor = Instructor.find_by(name: params[:student][:instructor])
     @student.save
     redirect_to student_path(@student)
@@ -39,11 +39,11 @@ class StudentsController < ApplicationController
  #delete
  def destroy
    @student = Student.find(params[:id])
-  if @student.instructor == current_user
+  # if @student.instructor == current_user
     @student.destroy
-  else
-    flash[:alert] = "Only the original author can delete"
-  end
+  # else
+  #   flash[:alert] = "Only the original author can delete"
+  # end
   redirect_to students_path
 end
 
